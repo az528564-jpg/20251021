@@ -1,0 +1,63 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+/* 側邊選單的樣式 */
+.sidebar {
+  height: 100%; /* 讓側邊欄與視窗同高 */
+  width: 10px; /* 預設寬度（隱藏狀態） */
+  position: fixed; /* 固定在視窗位置 */
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333; /* 背景顏色 */
+  overflow-x: hidden; /* 隱藏超出寬度的內容（如文字） */
+  transition: 0.5s; /* 加入過渡效果，讓寬度變化更平滑 */
+  padding-top: 60px; /* 頂部留白 */
+  white-space: nowrap; /* 防止選單文字換行 */
+}
+
+/* 側邊選單內的連結樣式 */
+.sidebar a {
+  padding: 15px 8px 15px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* 連結滑過時的顏色變化 */
+.sidebar a:hover {
+  color: #f1f1f1;
+  background-color: #555;
+}
+
+/* 核心功能：滑鼠滑過側邊欄時，寬度展開 */
+.sidebar:hover {
+  width: 250px; /* 完整寬度（顯示狀態） */
+}
+
+/* 主要內容區（可選，用於測試效果） */
+.main-content {
+  margin-left: 50px; /* 讓主要內容不被預設的側邊欄寬度遮擋 */
+  padding: 1px 16px;
+  transition: margin-left 0.5s;
+}
+
+/* 當側邊欄展開時，主要內容區也可以往右推（可選） */
+/* 注意：這個效果需要搭配 JavaScript 才能實現，純 CSS 方式較難直接推開其他不相關的元素。 */
+/* 如果您想要簡單的純 CSS 效果，可以忽略這部分，只專注於 .sidebar:hover */
